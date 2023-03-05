@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2023 at 10:14 AM
+-- Generation Time: Mar 05, 2023 at 01:08 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -34,17 +34,22 @@ CREATE TABLE `user` (
   `image` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `password` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `date_created` int(11) NOT NULL,
-  `role_id` int(11) NOT NULL
+  `role_id` int(11) NOT NULL,
+  `telp` varchar(13) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `tgl_lhr` date DEFAULT NULL,
+  `ktp` varchar(16) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `sex` varchar(1) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `date_created`, `role_id`) VALUES
-(5, 'upik paranita', 'upikparanita19@gmail.com', 'upik.jpeg', '$2y$10$JVxCSyC4l7OUGDjkv0Dvo.kAHvEkag11v7x1GU45oGKlu.w/pCfqK', 1677773401, 1),
-(6, 'yulinday fajri nurmayani', 'yulindafajri@gmail.com', 'd1.png', '$2y$10$cXlaXVUTPAemd1EcOMbgU.RHkSHNptiPkbPRuEcjmE8EFaSKwQgOW', 1677776321, 2),
-(7, 'hanan rose', 'hananrosyada@gmail.com', 'default.png', '$2y$10$mH/rW2G96QPpd3XGMxDlh.OKxjExzj2KOM6VeT0Nd7GQ0ta9BeWei', 1677830171, 2);
+INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `date_created`, `role_id`, `telp`, `tgl_lhr`, `ktp`, `sex`) VALUES
+(5, 'upik paranita', 'upikparanita19@gmail.com', 'upik.jpeg', '$2y$10$JVxCSyC4l7OUGDjkv0Dvo.kAHvEkag11v7x1GU45oGKlu.w/pCfqK', 1677773401, 1, '08967346778', '2013-03-01', '3309025924509800', 'p'),
+(6, 'yulinday fajri nurmayani', 'yulindafajri@gmail.com', 'd1.png', '$2y$10$cXlaXVUTPAemd1EcOMbgU.RHkSHNptiPkbPRuEcjmE8EFaSKwQgOW', 1677776321, 2, '', NULL, '', ''),
+(7, 'hanan rose', 'hananrosyada@gmail.com', 'default.png', '$2y$10$mH/rW2G96QPpd3XGMxDlh.OKxjExzj2KOM6VeT0Nd7GQ0ta9BeWei', 1677830171, 2, '', NULL, '', ''),
+(8, 'yusuf', 'akhmadyusufritonga@gmail.com', 'default.png', '$2y$10$Ve/ib9UAg7Bw3kElpTuc8OaArkU41wJV1dcozUoW/sGjn6Eq1Avx.', 1677976840, 2, '', NULL, '', '');
 
 -- --------------------------------------------------------
 
@@ -171,7 +176,7 @@ ALTER TABLE `user_sub_menu`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `user_access_menu`
