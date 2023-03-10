@@ -53,6 +53,18 @@
         $(this).next('.custom-file-label').addClass("selected").html(fileName);
     });
 </script>
+
+<!--load jquery-->
+<script src="<?php echo base_url('assets/js/jquery-1.10.2.js'); ?>"></script>
+<!--load jquery ui js file-->
+<script src="<?php echo base_url('assets/jquery-ui-1.12.0/jquery-ui.js'); ?>"></script>
+<script type="text/javascript">
+    $(function() {
+        $("#dob").datepicker({
+            dateFormat: 'yy-mm-dd'
+        });
+    });
+</script>
 </body>
 
 </html>
